@@ -15,9 +15,35 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "News view",
-  description: "Made By Shakil",
+  title: {
+    default: "Global News App",
+    template: "%s | Global News App",
+  },
+  description:
+    "Read top headlines from around the world. Filter news by country and category.",
+  keywords: ["news app", "world news", "latest headlines", "nextjs news app"],
+  authors: [{ name: "Shakil Ahmed" }],
+  metadataBase: new URL("https://your-domain.com"),
+  openGraph: {
+    title: "Global News App",
+    description: "Stay updated with the latest international news by country.",
+    url: "https://your-domain.com",
+    siteName: "Global News App",
+    // images: [
+    //   {
+    //     url: "/og-image.png",
+    //     width: 1200,
+    //     height: 630,
+    //   },
+    // ],
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
+
 //
 export default function RootLayout({
   children,
