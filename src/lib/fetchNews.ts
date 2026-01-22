@@ -2,7 +2,7 @@ import { NewsArticle } from "@/types/news";
 //
 export async function fetchNews(country: string): Promise<NewsArticle[]> {
   const res = await fetch(
-    `https://newsapi.org/v2/top-headlines?country=${country}&apiKey=${process.env.NEWS_API_KEY}`,
+    `https://newsapi.org/v2/top-headlines?country=${country}&apiKey=${process.env.NEXT_PUBLIC_NEWS_API_KEY}`,
     { cache: "no-store" },
   );
   //
