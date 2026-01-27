@@ -16,7 +16,7 @@ export default function Home() {
     setLoading(true);
     fetchNews(country)
       .then(setNews)
-      .finally(() => setLoading(false));
+      .catch(() => alert("error data fetch"));
   }, [country]);
   //
   return (
